@@ -1,1 +1,1 @@
-module.exports = require('./npm-template').default
+module.exports = require('./romaji').default
