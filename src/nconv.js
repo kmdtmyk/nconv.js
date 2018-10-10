@@ -114,6 +114,63 @@ export default class{
     return text
   }
 
+  static romajiToHankakuKatakana(text){
+    const convertMap1 = {
+      a: 'ｱ', i: 'ｲ', u: 'ｳ', e: 'ｴ', o: 'ｵ',
+      '-': 'ｰ',
+    }
+    const convertMap2 = {
+      nn: 'ﾝ',
+      ka: 'ｶ', ki: 'ｷ', ku: 'ｸ', ke: 'ｹ', ko: 'ｺ',
+      sa: 'ｻ', si: 'ｼ', su: 'ｽ', se: 'ｾ', so: 'ｿ',
+      ta: 'ﾀ', ti: 'ﾁ', tu: 'ﾂ', te: 'ﾃ', to: 'ﾄ',
+      na: 'ﾅ', ni: 'ﾆ', nu: 'ﾇ', ne: 'ﾈ', no: 'ﾉ',
+      ha: 'ﾊ', hi: 'ﾋ', hu: 'ﾌ', he: 'ﾍ', ho: 'ﾎ',
+      ma: 'ﾏ', mi: 'ﾐ', mu: 'ﾑ', me: 'ﾒ', mo: 'ﾓ',
+      ya: 'ﾔ', yu: 'ﾕ', ye: 'ｲｪ', yo: 'ﾖ',
+      ra: 'ﾗ', ri: 'ﾘ', ru: 'ﾙ', re: 'ﾚ', ro: 'ﾛ',
+      wa: 'ﾜ', wo: 'ｦ',
+      ga: 'ｶﾞ', gi: 'ｷﾞ', gu: 'ｸﾞ', ge: 'ｹﾞ', go: 'ｺﾞ',
+      za: 'ｻﾞ', zi: 'ｼﾞ', zu: 'ｽﾞ', ze: 'ｾﾞ', zo: 'ｿﾞ',
+      da: 'ﾀﾞ', di: 'ﾁﾞ', du: 'ﾂﾞ', de: 'ﾃﾞ', do: 'ﾄﾞ',
+      ba: 'ﾊﾞ', bi: 'ﾋﾞ', bu: 'ﾌﾞ', be: 'ﾍﾞ', bo: 'ﾎﾞ',
+      pa: 'ﾊﾟ', pi: 'ﾋﾟ', pu: 'ﾌﾟ', pe: 'ﾍﾟ', po: 'ﾎﾟ',
+      fa: 'ﾌｧ', fi: 'ﾌｨ', fu: 'ﾌ', fe: 'ﾌｪ', fo: 'ﾌｫ',
+      qa: 'ｸｧ', qi: 'ｸｨ', qu: 'ｸ', qe: 'ｸｪ', qo: 'ｸｫ',
+      ja: 'ｼﾞｬ', ji: 'ｼﾞ', ju: 'ｼﾞｭ', je: 'ｼﾞｪ', jo: 'ｼﾞｮ',
+      va: 'ｳﾞｧ', vi: 'ｳﾞｨ', vu: 'ｳﾞ', ve: 'ｳﾞｪ', vo: 'ｳﾞｫ',
+      xa: 'ｧ', xi: 'ｨ', xu: 'ｩ', xe: 'ｪ', xo: 'ｫ',
+      la: 'ｧ', li: 'ｨ', lu: 'ｩ', le: 'ｪ', lo: 'ｫ',
+    }
+    const convertMap3 = {
+      kya: 'ｷｬ', kyi: 'ｷｨ', kyu: 'ｷｭ', kye: 'ｷｪ', kyo: 'ｷｮ',
+      gya: 'ｷﾞｬ', gyi: 'ｷﾞｨ', gyu: 'ｷﾞｭ', gye: 'ｷﾞｪ', gyo: 'ｷﾞｮ',
+      sya: 'ｼｬ', syi: 'ｼｨ', syu: 'ｼｭ', sye: 'ｼｪ', syo: 'ｼｮ',
+      zya: 'ｼﾞｬ', zyi: 'ｼﾞｨ', zyu: 'ｼﾞｭ', zye: 'ｼﾞｪ', zyo: 'ｼﾞｮ',
+      jya: 'ｼﾞｬ', jyi: 'ｼﾞｨ', jyu: 'ｼﾞｭ', jye: 'ｼﾞｪ', jyo: 'ｼﾞｮ',
+      tya: 'ﾁｬ', tyi: 'ﾁｨ', tyu: 'ﾁｭ', tye: 'ﾁｪ', tyo: 'ﾁｮ',
+      cya: 'ﾁｬ', cyi: 'ﾁｨ', cyu: 'ﾁｭ', cye: 'ﾁｪ', cyo: 'ﾁｮ',
+      dya: 'ﾁﾞｬ', dyi: 'ﾁﾞｨ', dyu: 'ﾁﾞｭ', dye: 'ﾁﾞｪ', dyo: 'ﾁﾞｮ',
+      hya: 'ﾋｬ', hyi: 'ﾋｨ', hyu: 'ﾋｭ', hye: 'ﾋｪ', hyo: 'ﾋｮ',
+      bya: 'ﾋﾞｬ', byi: 'ﾋﾞｨ', byu: 'ﾋﾞｭ', bye: 'ﾋﾞｪ', byo: 'ﾋﾞｮ',
+      shi: 'ｼ', chi: 'ﾁ', tsu: 'ﾂ',
+      xya: 'ｬ', xyu: 'ｭ', xyo: 'ｮ',
+      lya: 'ｬ', lyu: 'ｭ', lyo: 'ｮ',
+      xtu: 'ｯ', ltu: 'ｯ',
+    }
+    const convertMap4 = {
+      xtsu: 'ｯ', ltsu: 'ｯ',
+    }
+
+    text = replaceConsecutiveConsonant(text, 'ｯ')
+    text = applyConvertMap(text, convertMap4)
+    text = applyConvertMap(text, convertMap3)
+    text = applyConvertMap(text, convertMap2)
+    text = applyConvertMap(text, convertMap1)
+    text = text.replace(/n/g, 'ﾝ')
+    return text
+  }
+
 }
 
 function applyConvertMap(text, convertMap){
