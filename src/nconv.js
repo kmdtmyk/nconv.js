@@ -1,14 +1,6 @@
 export default class{
 
   static romajiToHiragana(text){
-
-    function applyConvertMap(text, convertMap){
-      for(const key in convertMap){
-        text = text.replace(new RegExp(key, 'g'), convertMap[key])
-      }
-      return text
-    }
-
     const convertMap1 = {
       a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お',
       '-': 'ー',
@@ -69,4 +61,72 @@ export default class{
     return text
   }
 
+  static romajiToZenkakuKatakana(text){
+    const convertMap1 = {
+      a: 'ア', i: 'イ', u: 'ウ', e: 'エ', o: 'オ',
+      '-': 'ー',
+    }
+    const convertMap2 = {
+      nn: 'ン',
+      ka: 'カ', ki: 'キ', ku: 'ク', ke: 'ケ', ko: 'コ',
+      sa: 'サ', si: 'シ', su: 'ス', se: 'セ', so: 'ソ',
+      ta: 'タ', ti: 'チ', tu: 'ツ', te: 'テ', to: 'ト',
+      na: 'ナ', ni: 'ニ', nu: 'ヌ', ne: 'ネ', no: 'ノ',
+      ha: 'ハ', hi: 'ヒ', hu: 'フ', he: 'ヘ', ho: 'ホ',
+      ma: 'マ', mi: 'ミ', mu: 'ム', me: 'メ', mo: 'モ',
+      ya: 'ヤ', yu: 'ユ', ye: 'イェ', yo: 'ヨ',
+      ra: 'ラ', ri: 'リ', ru: 'ル', re: 'レ', ro: 'ロ',
+      wa: 'ワ', wo: 'ヲ',
+      ga: 'ガ', gi: 'ギ', gu: 'グ', ge: 'ゲ', go: 'ゴ',
+      za: 'ザ', zi: 'ジ', zu: 'ズ', ze: 'ゼ', zo: 'ゾ',
+      da: 'ダ', di: 'ヂ', du: 'ヅ', de: 'デ', do: 'ド',
+      ba: 'バ', bi: 'ビ', bu: 'ブ', be: 'ベ', bo: 'ボ',
+      pa: 'パ', pi: 'ピ', pu: 'プ', pe: 'ペ', po: 'ポ',
+      fa: 'ファ', fi: 'フィ', fu: 'フ', fe: 'フェ', fo: 'フォ',
+      qa: 'クァ', qi: 'クィ', qu: 'ク', qe: 'クェ', qo: 'クォ',
+      ja: 'ジャ', ji: 'ジ', ju: 'ジュ', je: 'ジェ', jo: 'ジョ',
+      va: 'ヴァ', vi: 'ヴィ', vu: 'ヴ', ve: 'ヴェ', vo: 'ヴォ',
+      xa: 'ァ', xi: 'ィ', xu: 'ゥ', xe: 'ェ', xo: 'ォ',
+      la: 'ァ', li: 'ィ', lu: 'ゥ', le: 'ェ', lo: 'ォ',
+    }
+    const convertMap3 = {
+      kya: 'キャ', kyi: 'キィ', kyu: 'キュ', kye: 'キェ', kyo: 'キョ',
+      gya: 'ギャ', gyi: 'ギィ', gyu: 'ギュ', gye: 'ギェ', gyo: 'ギョ',
+      sya: 'シャ', syi: 'シィ', syu: 'シュ', sye: 'シェ', syo: 'ショ',
+      zya: 'ジャ', zyi: 'ジィ', zyu: 'ジュ', zye: 'ジェ', zyo: 'ジョ',
+      jya: 'ジャ', jyi: 'ジィ', jyu: 'ジュ', jye: 'ジェ', jyo: 'ジョ',
+      tya: 'チャ', tyi: 'チィ', tyu: 'チュ', tye: 'チェ', tyo: 'チョ',
+      cya: 'チャ', cyi: 'チィ', cyu: 'チュ', cye: 'チェ', cyo: 'チョ',
+      dya: 'ヂャ', dyi: 'ヂィ', dyu: 'ヂュ', dye: 'ヂェ', dyo: 'ヂョ',
+      hya: 'ヒャ', hyi: 'ヒィ', hyu: 'ヒュ', hye: 'ヒェ', hyo: 'ヒョ',
+      bya: 'ビャ', byi: 'ビィ', byu: 'ビュ', bye: 'ビェ', byo: 'ビョ',
+      shi: 'シ', chi: 'チ', tsu: 'ツ',
+      xya: 'ャ', xyu: 'ュ', xyo: 'ョ',
+      lya: 'ャ', lyu: 'ュ', lyo: 'ョ',
+      xtu: 'ッ', ltu: 'ッ',
+    }
+    const convertMap4 = {
+      xtsu: 'ッ', ltsu: 'ッ',
+    }
+
+    text = text.replace(/([bcdfghjklmpqrstvwxyz])\1+/g, match => {
+      return 'ッ'.repeat(match.length - 1) + match[0]
+    })
+
+    text = applyConvertMap(text, convertMap4)
+    text = applyConvertMap(text, convertMap3)
+    text = applyConvertMap(text, convertMap2)
+    text = applyConvertMap(text, convertMap1)
+
+    text = text.replace(/n(?!$)/g, 'ン')
+    return text
+  }
+
+}
+
+function applyConvertMap(text, convertMap){
+  for(const key in convertMap){
+    text = text.replace(new RegExp(key, 'g'), convertMap[key])
+  }
+  return text
 }
