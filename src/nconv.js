@@ -14,6 +14,7 @@ export default class{
       '-': 'ー',
     }
     const convertMap2 = {
+      nn: 'ん',
       ka: 'か', ki: 'き', ku: 'く', ke: 'け', ko: 'こ',
       sa: 'さ', si: 'し', su: 'す', se: 'せ', so: 'そ',
       ta: 'た', ti: 'ち', tu: 'つ', te: 'て', to: 'と',
@@ -23,7 +24,6 @@ export default class{
       ya: 'や', yu: 'ゆ', ye: 'いぇ', yo: 'よ',
       ra: 'ら', ri: 'り', ru: 'る', re: 'れ', ro: 'ろ',
       wa: 'わ', wo: 'を',
-      nn: 'ん',
       ga: 'が', gi: 'ぎ', gu: 'ぐ', ge: 'げ', go: 'ご',
       za: 'ざ', zi: 'じ', zu: 'ず', ze: 'ぜ', zo: 'ぞ',
       da: 'だ', di: 'ぢ', du: 'づ', de: 'で', do: 'ど',
@@ -55,6 +55,10 @@ export default class{
     const convertMap4 = {
       xtsu: 'っ', ltsu: 'っ',
     }
+
+    text = text.replace(/([bcdfghjklmpqrstvwxyz])\1+/g, match => {
+      return 'っ'.repeat(match.length - 1) + match[0]
+    })
 
     text = applyConvertMap(text, convertMap4)
     text = applyConvertMap(text, convertMap3)
