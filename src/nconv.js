@@ -57,7 +57,7 @@ export default class{
     return text
   }
 
-  static romajiToZenkakuKatakana(text){
+  static romajiToZenKata(text){
     const convertMap1 = {
       a: 'ア', i: 'イ', u: 'ウ', e: 'エ', o: 'オ',
       '-': 'ー',
@@ -114,7 +114,7 @@ export default class{
     return text
   }
 
-  static romajiToHankakuKatakana(text){
+  static romajiToHanKata(text){
     const convertMap1 = {
       a: 'ｱ', i: 'ｲ', u: 'ｳ', e: 'ｴ', o: 'ｵ',
       '-': 'ｰ',
