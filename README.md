@@ -14,6 +14,12 @@ import Nconv from '@kmdtmyk/nconv'
 
 Nconv.romajiToHiragana('nihongo')
 // => にほんご
+
+Nconv.romajiToZenKata('nihongo')
+// => ニホンゴ
+
+Nconv.romajiToHanKata('nihongo')
+// => ﾆﾎﾝｺﾞ
 ```
 
 ## License
