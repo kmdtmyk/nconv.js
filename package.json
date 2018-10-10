@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kmdtmyk/nconv.git"
+    "url": "git+https://github.com/kmdtmyk/nconv.js.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kmdtmyk/nconv/issues"
+    "url": "https://github.com/kmdtmyk/nconv.js/issues"
   },
-  "homepage": "https://github.com/kmdtmyk/nconv#readme",
+  "homepage": "https://github.com/kmdtmyk/nconv.js#readme",
   "devDependencies": {
     "babel-jest": "^23.0.0-alpha.0",
     "babel-preset-env": "^1.6.1",
