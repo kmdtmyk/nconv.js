@@ -50,6 +50,7 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('xtsu')).toBe('っ')
     expect(Nconv.romajiToHiragana('ltsu')).toBe('っ')
 
+    expect(Nconv.romajiToHiragana('knkn')).toBe('kんkん')
   })
 
   test('重ね子音字', () => {
@@ -99,10 +100,6 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('lltsu')).toBe('っっ')
 
     expect(Nconv.romajiToHiragana('kkkkka')).toBe('っっっっか')
-  })
-
-  test('n', () => {
-    expect(Nconv.romajiToHiragana('knkn')).toBe('kんkn')
   })
 
 })
@@ -157,6 +154,7 @@ describe('romajiToZenkakuKatakana', () => {
     expect(Nconv.romajiToZenkakuKatakana('xtsu')).toBe('ッ')
     expect(Nconv.romajiToZenkakuKatakana('ltsu')).toBe('ッ')
 
+    expect(Nconv.romajiToZenkakuKatakana('knkn')).toBe('kンkン')
   })
 
   test('重ね子音字', () => {
@@ -206,10 +204,6 @@ describe('romajiToZenkakuKatakana', () => {
     expect(Nconv.romajiToZenkakuKatakana('lltsu')).toBe('ッッ')
 
     expect(Nconv.romajiToZenkakuKatakana('kkkkka')).toBe('ッッッッカ')
-  })
-
-  test('n', () => {
-    expect(Nconv.romajiToZenkakuKatakana('knkn')).toBe('kンkn')
   })
 
 })

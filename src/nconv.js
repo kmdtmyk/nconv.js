@@ -57,7 +57,7 @@ export default class{
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)
 
-    text = text.replace(/n(?!$)/g, 'ん')
+    text = text.replace(/n/g, 'ん')
     return text
   }
 
@@ -118,7 +118,7 @@ export default class{
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)
 
-    text = text.replace(/n(?!$)/g, 'ン')
+    text = text.replace(/n/g, 'ン')
     return text
   }
 
