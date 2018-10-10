@@ -1,5 +1,5 @@
 {
-  "name": "romaji",
+  "name": "nconv",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kmdtmyk/romaji.js.git"
+    "url": "git+https://github.com/kmdtmyk/nconv.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kmdtmyk/romaji.js/issues"
+    "url": "https://github.com/kmdtmyk/nconv/issues"
   },
-  "homepage": "https://github.com/kmdtmyk/romaji.js#readme",
+  "homepage": "https://github.com/kmdtmyk/nconv#readme",
   "devDependencies": {
     "babel-jest": "^23.0.0-alpha.0",
     "babel-preset-env": "^1.6.1",
