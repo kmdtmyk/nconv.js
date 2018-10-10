@@ -48,15 +48,11 @@ export default class{
       xtsu: 'っ', ltsu: 'っ',
     }
 
-    text = text.replace(/([bcdfghjklmpqrstvwxyz])\1+/g, match => {
-      return 'っ'.repeat(match.length - 1) + match[0]
-    })
-
+    text = replaceConsecutiveConsonant(text, 'っ')
     text = applyConvertMap(text, convertMap4)
     text = applyConvertMap(text, convertMap3)
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)
-
     text = text.replace(/n/g, 'ん')
     return text
   }
@@ -109,15 +105,11 @@ export default class{
       xtsu: 'ッ', ltsu: 'ッ',
     }
 
-    text = text.replace(/([bcdfghjklmpqrstvwxyz])\1+/g, match => {
-      return 'ッ'.repeat(match.length - 1) + match[0]
-    })
-
+    text = replaceConsecutiveConsonant(text, 'ッ')
     text = applyConvertMap(text, convertMap4)
     text = applyConvertMap(text, convertMap3)
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)
-
     text = text.replace(/n/g, 'ン')
     return text
   }
@@ -129,4 +121,10 @@ function applyConvertMap(text, convertMap){
     text = text.replace(new RegExp(key, 'g'), convertMap[key])
   }
   return text
+}
+
+function replaceConsecutiveConsonant(text, char){
+  return text.replace(/([bcdfghjklmpqrstvwxyz])\1+/g, match => {
+    return char.repeat(match.length - 1) + match[0]
+  })
 }
