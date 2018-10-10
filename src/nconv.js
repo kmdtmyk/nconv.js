@@ -64,6 +64,8 @@ export default class{
     text = applyConvertMap(text, convertMap3)
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)
+
+    text = text.replace(/n(?!$)/g, 'ん')
     return text
   }
 

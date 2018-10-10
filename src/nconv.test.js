@@ -49,6 +49,7 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('ltu')).toBe('っ')
     expect(Nconv.romajiToHiragana('xtsu')).toBe('っ')
     expect(Nconv.romajiToHiragana('ltsu')).toBe('っ')
+
   })
 
   test('重ね子音字', () => {
@@ -98,6 +99,10 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('lltsu')).toBe('っっ')
 
     expect(Nconv.romajiToHiragana('kkkkka')).toBe('っっっっか')
+  })
+
+  test('n', () => {
+    expect(Nconv.romajiToHiragana('knkn')).toBe('kんkn')
   })
 
 })
