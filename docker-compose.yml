@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: node:10.11.0
+    environment:
+      TZ: Asia/Tokyo
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    tty: true
