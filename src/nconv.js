@@ -257,7 +257,7 @@ export default class{
    * @example
    *  ｱｲｳｴｵ -> あいうえお
    */
-  static hankataToHiragana(text){
+  static hanKataToHiragana(text){
     const convertMap = {
       'ｶﾞ': 'が', 'ｷﾞ': 'ぎ', 'ｸﾞ': 'ぐ', 'ｹﾞ': 'げ', 'ｺﾞ': 'ご',
       'ｻﾞ': 'ざ', 'ｼﾞ': 'じ', 'ｽﾞ': 'ず', 'ｾﾞ': 'ぜ', 'ｿﾞ': 'ぞ',
