@@ -1,6 +1,10 @@
 
 [![Build Status](https://travis-ci.org/kmdtmyk/nconv.js.svg?branch=master)](https://travis-ci.org/kmdtmyk/nconv.js)
 
+# Nconv
+
+Nihongo conversion library. This converts hiragana, katakana, romaji. Also, this converts half-width and full-width character.
+
 ## Install
 
 ```
