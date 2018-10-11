@@ -30,8 +30,14 @@ Nconv.hiraganaToHanKata('あいうえお')
 Nconv.zenKataToHiragana('アイウエオ')
 // => あいうえお
 
+Nconv.zenKataToHanKata('アイウエオ')
+// => ｱｲｳｴｵ
+
 Nconv.hanKataToHiragana('ｱｲｳｴｵ')
 // => あいうえお
+
+Nconv.hanKataToZenKata('ｱｲｳｴｵ')
+// => アイウエオ
 
 Nconv.alphabetToZenkaku('abcde')
 // => ａｂｃｄｅｆ
