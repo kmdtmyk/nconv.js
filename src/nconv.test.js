@@ -1,7 +1,7 @@
 import Nconv from './nconv'
 
 describe('romajiToHiragana', () => {
-  test('基本', () => {
+  test('basic', () => {
     expect(Nconv.romajiToHiragana('aiueo')).toBe('あいうえお')
     expect(Nconv.romajiToHiragana('kakikukeko')).toBe('かきくけこ')
     expect(Nconv.romajiToHiragana('sasisuseso')).toBe('さしすせそ')
@@ -53,7 +53,7 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('knkn')).toBe('kんkん')
   })
 
-  test('重ね子音字', () => {
+  test('double consonant', () => {
     expect(Nconv.romajiToHiragana('kkakkikkukkekko')).toBe('っかっきっくっけっこ')
     expect(Nconv.romajiToHiragana('ssassissussesso')).toBe('っさっしっすっせっそ')
     expect(Nconv.romajiToHiragana('ttattittuttetto')).toBe('ったっちっつってっと')
@@ -105,7 +105,7 @@ describe('romajiToHiragana', () => {
 })
 
 describe('romajiToZenKata', () => {
-  test('基本', () => {
+  test('basic', () => {
     expect(Nconv.romajiToZenKata('aiueo')).toBe('アイウエオ')
     expect(Nconv.romajiToZenKata('kakikukeko')).toBe('カキクケコ')
     expect(Nconv.romajiToZenKata('sasisuseso')).toBe('サシスセソ')
@@ -157,7 +157,7 @@ describe('romajiToZenKata', () => {
     expect(Nconv.romajiToZenKata('knkn')).toBe('kンkン')
   })
 
-  test('重ね子音字', () => {
+  test('double consonant', () => {
     expect(Nconv.romajiToZenKata('kkakkikkukkekko')).toBe('ッカッキックッケッコ')
     expect(Nconv.romajiToZenKata('ssassissussesso')).toBe('ッサッシッスッセッソ')
     expect(Nconv.romajiToZenKata('ttattittuttetto')).toBe('ッタッチッツッテット')
@@ -209,7 +209,7 @@ describe('romajiToZenKata', () => {
 })
 
 describe('romajiToHanKata', () => {
-  test('基本', () => {
+  test('basic', () => {
     expect(Nconv.romajiToHanKata('aiueo')).toBe('ｱｲｳｴｵ')
     expect(Nconv.romajiToHanKata('kakikukeko')).toBe('ｶｷｸｹｺ')
     expect(Nconv.romajiToHanKata('sasisuseso')).toBe('ｻｼｽｾｿ')
@@ -261,7 +261,7 @@ describe('romajiToHanKata', () => {
     expect(Nconv.romajiToHanKata('knkn')).toBe('kﾝkﾝ')
   })
 
-  test('重ね子音字', () => {
+  test('double consonant', () => {
     expect(Nconv.romajiToHanKata('kkakkikkukkekko')).toBe('ｯｶｯｷｯｸｯｹｯｺ')
     expect(Nconv.romajiToHanKata('ssassissussesso')).toBe('ｯｻｯｼｯｽｯｾｯｿ')
     expect(Nconv.romajiToHanKata('ttattittuttetto')).toBe('ｯﾀｯﾁｯﾂｯﾃｯﾄ')
