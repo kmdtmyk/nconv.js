@@ -1,5 +1,12 @@
 export default class{
 
+  /**
+   * Convert romaji to hiragana.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  aiueo -> あいうえお
+   */
   static romajiToHiragana(text){
     const convertMap1 = {
       a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お',
@@ -57,6 +64,13 @@ export default class{
     return text
   }
 
+  /**
+   * Convert romaji to zenkaku katakana.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  aiueo -> アイウエオ
+   */
   static romajiToZenKata(text){
     const convertMap1 = {
       a: 'ア', i: 'イ', u: 'ウ', e: 'エ', o: 'オ',
@@ -114,6 +128,13 @@ export default class{
     return text
   }
 
+  /**
+   * Convert romaji to hankaku katakana.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  aiueo -> ｱｲｳｴｵ
+   */
   static romajiToHanKata(text){
     const convertMap1 = {
       a: 'ｱ', i: 'ｲ', u: 'ｳ', e: 'ｴ', o: 'ｵ',
@@ -171,6 +192,13 @@ export default class{
     return text
   }
 
+  /**
+   * Convert hiragana to zenkaku katakana.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  あいうえお -> アイウエオ
+   */
   static hiraganaToZenKata(text){
     return text.replace(/[\u3041-\u3096]/g, match => {
       const char = match.charCodeAt(0) + 0x60
@@ -178,6 +206,13 @@ export default class{
     })
   }
 
+  /**
+   * Convert zenkaku katakana to hiragana.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  アイウエオ -> あいうえお
+   */
   static ZenKataToHiragana(text){
     return text.replace(/[\u3041-\u30f6]/g, match => {
       const char = match.charCodeAt(0) - 0x60
@@ -185,6 +220,13 @@ export default class{
     })
   }
 
+  /**
+   * Convert hiragana to hankaku katakana.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  あいうえお -> ｱｲｳｴｵ
+   */
   static hiraganaToHanKata(text){
     const convertMap = {
       'あ': 'ｱ', 'い': 'ｲ', 'う': 'ｳ', 'え': 'ｴ', 'お': 'ｵ',
