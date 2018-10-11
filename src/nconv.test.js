@@ -457,3 +457,7 @@ test('numericToHankaku', () => {
 test('toHankaku', () => {
   expect(Nconv.toHankaku('１２３ａｂｃアイウ')).toBe('123abcｱｲｳ')
 })
+
+test('toZenkaku', () => {
+  expect(Nconv.toZenkaku('123abcｱｲｳ')).toBe('１２３ａｂｃアイウ')
+})

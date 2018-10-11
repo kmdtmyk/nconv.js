@@ -414,6 +414,20 @@ export default class{
     return text
   }
 
+  /**
+   * Convert to zenkaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  123abcｱｲｳ -> １２３ａｂｃアイウ
+   */
+  static toZenkaku(text){
+    text = this.alphabetToZenkaku(text)
+    text = this.numericToZenkaku(text)
+    text = this.hanKataToZenKata(text)
+    return text
+  }
+
 }
 
 function applyConvertMap(text, convertMap){
