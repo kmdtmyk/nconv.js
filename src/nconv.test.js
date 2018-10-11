@@ -333,6 +333,27 @@ test('hiraganaToZenKata', () => {
   expect(Nconv.hiraganaToZenKata('ー')).toBe('ー')
 })
 
+test('ZenKataToHiragana', () => {
+  expect(Nconv.ZenKataToHiragana('アイウエオ')).toBe('あいうえお')
+  expect(Nconv.ZenKataToHiragana('カキクケコ')).toBe('かきくけこ')
+  expect(Nconv.ZenKataToHiragana('サシスセソ')).toBe('さしすせそ')
+  expect(Nconv.ZenKataToHiragana('タチツテト')).toBe('たちつてと')
+  expect(Nconv.ZenKataToHiragana('ナニヌネノ')).toBe('なにぬねの')
+  expect(Nconv.ZenKataToHiragana('ハヒフヘホ')).toBe('はひふへほ')
+  expect(Nconv.ZenKataToHiragana('マミムメモ')).toBe('まみむめも')
+  expect(Nconv.ZenKataToHiragana('ヤユヨ')).toBe('やゆよ')
+  expect(Nconv.ZenKataToHiragana('ワヲン')).toBe('わをん')
+  expect(Nconv.ZenKataToHiragana('ガギグゲゴ')).toBe('がぎぐげご')
+  expect(Nconv.ZenKataToHiragana('ザジズゼゾ')).toBe('ざじずぜぞ')
+  expect(Nconv.ZenKataToHiragana('ダヂヅデド')).toBe('だぢづでど')
+  expect(Nconv.ZenKataToHiragana('バビブベボ')).toBe('ばびぶべぼ')
+  expect(Nconv.ZenKataToHiragana('パピプペポ')).toBe('ぱぴぷぺぽ')
+  expect(Nconv.ZenKataToHiragana('ァィゥェォ')).toBe('ぁぃぅぇぉ')
+  expect(Nconv.ZenKataToHiragana('ャュョ')).toBe('ゃゅょ')
+  expect(Nconv.ZenKataToHiragana('ッ')).toBe('っ')
+  expect(Nconv.ZenKataToHiragana('ー')).toBe('ー')
+})
+
 test('hiraganaToHanKata', () => {
   expect(Nconv.hiraganaToHanKata('あいうえお')).toBe('ｱｲｳｴｵ')
   expect(Nconv.hiraganaToHanKata('かきくけこ')).toBe('ｶｷｸｹｺ')
