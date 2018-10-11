@@ -12,14 +12,26 @@ npm install @kmdtmyk/nconv
 ```js
 import Nconv from '@kmdtmyk/nconv'
 
-Nconv.romajiToHiragana('nihongo')
-// => にほんご
+Nconv.romajiToHiragana('aiueo')
+// => あいうえお
 
-Nconv.romajiToZenKata('nihongo')
-// => ニホンゴ
+Nconv.romajiToZenKata('aiueo')
+// => アイウエオ
 
-Nconv.romajiToHanKata('nihongo')
-// => ﾆﾎﾝｺﾞ
+Nconv.romajiToHanKata('aiueo')
+// => ｱｲｳｴｵ
+
+Nconv.hiraganaToZenKata('あいうえお')
+// => アイウエオ
+
+Nconv.hiraganaToHanKata('あいうえお')
+// => ｱｲｳｴｵ
+
+Nconv.zenKataToHiragana('アイウエオ')
+// => あいうえお
+
+Nconv.hanKataToHiragana('ｱｲｳｴｵ')
+// => あいうえお
 ```
 
 ## License
