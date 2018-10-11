@@ -396,6 +396,14 @@ test('hanKataToHiragana', () => {
   expect(Nconv.hanKataToHiragana('ｰ')).toBe('ｰ')
 })
 
+test('alphabetToZenkaku', () => {
+  expect(Nconv.alphabetToZenkaku('abcdefghijklmnopqrstuvwxyz')).toBe('ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ')
+})
+
+test('alphabetToHankaku', () => {
+  expect(Nconv.alphabetToHankaku('ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ')).toBe('abcdefghijklmnopqrstuvwxyz')
+})
+
 test('numericToZenkaku', () => {
   expect(Nconv.numericToZenkaku('0123456789')).toBe('０１２３４５６７８９')
 })

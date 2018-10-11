@@ -33,6 +33,12 @@ Nconv.zenKataToHiragana('アイウエオ')
 Nconv.hanKataToHiragana('ｱｲｳｴｵ')
 // => あいうえお
 
+Nconv.alphabetToZenkaku('abcde')
+// => ａｂｃｄｅｆ
+
+Nconv.alphabetToHankaku('ａｂｃｄｅｆ')
+// => abcde
+
 Nconv.numericToZenkaku('0123456789')
 // => ０１２３４５６７８９
 

@@ -310,6 +310,32 @@ export default class{
     })
   }
 
+  /**
+   * Convert alphabet to zenkaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  abcde -> ａｂｃｄｅｆ
+   */
+  static alphabetToZenkaku(text){
+    return text.replace(/[a-z]/g, function(s) {
+      return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+    })
+  }
+
+  /**
+   * Convert alphabet to hankaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  ａｂｃｄｅｆ -> abcde
+   */
+  static alphabetToHankaku(text){
+    return text.replace(/[ａ-ｚ]/g, function(s) {
+      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    })
+  }
+
 }
 
 function applyConvertMap(text, convertMap){
