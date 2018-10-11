@@ -395,3 +395,11 @@ test('hanKataToHiragana', () => {
   expect(Nconv.hanKataToHiragana('ｯ')).toBe('っ')
   expect(Nconv.hanKataToHiragana('ｰ')).toBe('ｰ')
 })
+
+test('numericToZenkaku', () => {
+  expect(Nconv.numericToZenkaku('0123456789')).toBe('０１２３４５６７８９')
+})
+
+test('numericToHankaku', () => {
+  expect(Nconv.numericToHankaku('０１２３４５６７８９')).toBe('0123456789')
+})

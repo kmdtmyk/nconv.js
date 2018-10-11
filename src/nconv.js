@@ -284,6 +284,32 @@ export default class{
     return text
   }
 
+  /**
+   * Convert numeric to zenkaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  0123456789 -> ０１２３４５６７８９
+   */
+  static numericToZenkaku(text){
+    return text.replace(/[0-9]/g, function(s) {
+      return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+    })
+  }
+
+  /**
+   * Convert numeric to hankaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  ０１２３４５６７８９ -> 0123456789
+   */
+  static numericToHankaku(text){
+    return text.replace(/[０-９]/g, function(s) {
+      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    })
+  }
+
 }
 
 function applyConvertMap(text, convertMap){

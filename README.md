@@ -32,6 +32,12 @@ Nconv.zenKataToHiragana('アイウエオ')
 
 Nconv.hanKataToHiragana('ｱｲｳｴｵ')
 // => あいうえお
+
+Nconv.numericToZenkaku('0123456789')
+// => ０１２３４５６７８９
+
+Nconv.numericToHankaku('０１２３４５６７８９')
+// => 0123456789
 ```
 
 ## License
