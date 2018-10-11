@@ -453,3 +453,7 @@ test('numericToZenkaku', () => {
 test('numericToHankaku', () => {
   expect(Nconv.numericToHankaku('０１２３４５６７８９')).toBe('0123456789')
 })
+
+test('toHankaku', () => {
+  expect(Nconv.toHankaku('１２３ａｂｃアイウ')).toBe('123abcｱｲｳ')
+})

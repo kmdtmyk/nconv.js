@@ -400,6 +400,20 @@ export default class{
     })
   }
 
+  /**
+   * Convert to hankaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  １２３ａｂｃアイウ -> 123abcｱｲｳ
+   */
+  static toHankaku(text){
+    text = this.alphabetToHankaku(text)
+    text = this.numericToHankaku(text)
+    text = this.zenKataToHanKata(text)
+    return text
+  }
+
 }
 
 function applyConvertMap(text, convertMap){

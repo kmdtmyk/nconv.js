@@ -50,6 +50,9 @@ Nconv.numericToZenkaku('0123456789')
 
 Nconv.numericToHankaku('０１２３４５６７８９')
 // => 0123456789
+
+Nconv.toHankaku('１２３ａｂｃアイウ')
+// => 123abcｱｲｳ
 ```
 
 ## License
