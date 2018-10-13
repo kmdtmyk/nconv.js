@@ -10,6 +10,18 @@ module.exports = {
     libraryTarget: 'umd',
     globalObject: 'this',
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          }
+        ]
+      }
+    ]
+  },
   resolve: {
     modules: [
       path.resolve('./src'),
