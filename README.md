@@ -3,7 +3,7 @@
 
 # Nconv
 
-Nihongo conversion library. This converts hiragana, katakana, romaji. Also, this converts half-width and full-width character.
+Japanese conversion library. This converts hiragana, katakana, romaji. Also, this converts half-width and full-width character.
 
 ## Install
 
