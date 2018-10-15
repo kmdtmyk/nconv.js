@@ -1,7 +1,7 @@
 {
   "name": "@kmdtmyk/nconv",
   "version": "0.2.1",
-  "description": "Nihongo conversion library.",
+  "description": "Japanese conversion library.",
   "main": "dist/nconv.js",
   "scripts": {
     "start": "npm test -- --watch",
@@ -30,5 +30,11 @@
   },
   "files": [
     "dist/"
+  ],
+  "keywords": [
+    "japanese",
+    "hiragana",
+    "katakana",
+    "romaji"
   ]
 }
