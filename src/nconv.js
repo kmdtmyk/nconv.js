@@ -246,6 +246,7 @@ export default class{
       'ぱ': 'ﾊﾟ', 'ぴ': 'ﾋﾟ', 'ぷ': 'ﾌﾟ', 'ぺ': 'ﾍﾟ', 'ぽ': 'ﾎﾟ',
       'ぁ': 'ｧ', 'ぃ': 'ｨ', 'ぅ': 'ｩ', 'ぇ': 'ｪ', 'ぉ': 'ｫ',
       'ゃ': 'ｬ', 'ゅ': 'ｭ', 'ょ': 'ｮ', 'っ': 'ｯ',
+      'ー': 'ｰ',
     }
     return applyConvertMap(text, convertMap)
   }
@@ -278,6 +279,7 @@ export default class{
       'ﾜ': 'わ', 'ｦ': 'を', 'ﾝ': 'ん',
       'ｧ': 'ぁ', 'ｨ': 'ぃ', 'ｩ': 'ぅ', 'ｪ': 'ぇ', 'ｫ': 'ぉ',
       'ｬ': 'ゃ', 'ｭ': 'ゅ', 'ｮ': 'ょ', 'ｯ': 'っ',
+      'ｰ': 'ー',
     }
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)
@@ -310,6 +312,7 @@ export default class{
       'パ': 'ﾊﾟ', 'ピ': 'ﾋﾟ', 'プ': 'ﾌﾟ', 'ペ': 'ﾍﾟ', 'ポ': 'ﾎﾟ',
       'ァ': 'ｧ', 'ィ': 'ｨ', 'ゥ': 'ｩ', 'ェ': 'ｪ', 'ォ': 'ｫ',
       'ャ': 'ｬ', 'ュ': 'ｭ', 'ョ': 'ｮ', 'ッ': 'ｯ',
+      'ー': 'ｰ',
     }
     return applyConvertMap(text, convertMap)
   }
@@ -342,6 +345,7 @@ export default class{
       'ﾜ': 'ワ', 'ｦ': 'ヲ', 'ﾝ': 'ン',
       'ｧ': 'ァ', 'ｨ': 'ィ', 'ｩ': 'ゥ', 'ｪ': 'ェ', 'ｫ': 'ォ',
       'ｬ': 'ャ', 'ｭ': 'ュ', 'ｮ': 'ョ', 'ｯ': 'ッ',
+      'ｰ': 'ー',
     }
     text = applyConvertMap(text, convertMap2)
     text = applyConvertMap(text, convertMap1)

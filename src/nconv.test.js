@@ -372,7 +372,7 @@ test('hiraganaToHanKata', () => {
   expect(Nconv.hiraganaToHanKata('ぁぃぅぇぉ')).toBe('ｧｨｩｪｫ')
   expect(Nconv.hiraganaToHanKata('ゃゅょ')).toBe('ｬｭｮ')
   expect(Nconv.hiraganaToHanKata('っ')).toBe('ｯ')
-  expect(Nconv.hiraganaToHanKata('ｰ')).toBe('ｰ')
+  expect(Nconv.hiraganaToHanKata('ー')).toBe('ｰ')
 })
 
 test('hanKataToHiragana', () => {
@@ -393,7 +393,7 @@ test('hanKataToHiragana', () => {
   expect(Nconv.hanKataToHiragana('ｧｨｩｪｫ')).toBe('ぁぃぅぇぉ')
   expect(Nconv.hanKataToHiragana('ｬｭｮ')).toBe('ゃゅょ')
   expect(Nconv.hanKataToHiragana('ｯ')).toBe('っ')
-  expect(Nconv.hanKataToHiragana('ｰ')).toBe('ｰ')
+  expect(Nconv.hanKataToHiragana('ｰ')).toBe('ー')
 })
 
 test('zenKataToHanKata', () => {
@@ -414,7 +414,7 @@ test('zenKataToHanKata', () => {
   expect(Nconv.zenKataToHanKata('ァィゥェォ')).toBe('ｧｨｩｪｫ')
   expect(Nconv.zenKataToHanKata('ャュョ')).toBe('ｬｭｮ')
   expect(Nconv.zenKataToHanKata('ッ')).toBe('ｯ')
-  expect(Nconv.zenKataToHanKata('ｰ')).toBe('ｰ')
+  expect(Nconv.zenKataToHanKata('ー')).toBe('ｰ')
 })
 
 test('hanKataToZenKata', () => {
@@ -435,7 +435,7 @@ test('hanKataToZenKata', () => {
   expect(Nconv.hanKataToZenKata('ｧｨｩｪｫ')).toBe('ァィゥェォ')
   expect(Nconv.hanKataToZenKata('ｬｭｮ')).toBe('ャュョ')
   expect(Nconv.hanKataToZenKata('ｯ')).toBe('ッ')
-  expect(Nconv.hanKataToZenKata('ｰ')).toBe('ｰ')
+  expect(Nconv.hanKataToZenKata('ｰ')).toBe('ー')
 })
 
 test('alphabetToZenkaku', () => {
