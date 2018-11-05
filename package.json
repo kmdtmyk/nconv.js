@@ -1,6 +1,6 @@
 {
   "name": "@kmdtmyk/nconv",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Japanese conversion library.",
   "main": "dist/nconv.js",
   "scripts": {
