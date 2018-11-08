@@ -445,7 +445,7 @@ export default class{
    * @param {String} text
    * @return {String}
    * @example
-   *  123abcｱｲｳ -> １２３ａｂｃアイウ
+   *  123abcｱｲｳ!? -> １２３ａｂｃアイウ！？
    */
   static toZenkaku(text){
     text = this.alphabetToZenkaku(text)
@@ -460,7 +460,7 @@ export default class{
    * @param {String} text
    * @return {String}
    * @example
-   *  １２３ａｂｃアイウ -> 123abcｱｲｳ
+   *  １２３ａｂｃアイウ！？ -> 123abcｱｲｳ!?
    */
   static toHankaku(text){
     text = this.alphabetToHankaku(text)
