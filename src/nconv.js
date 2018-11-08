@@ -415,17 +415,29 @@ export default class{
   }
 
   /**
-   * Convert to hankaku.
+   * Convert symbol to zenkaku.
    * @param {String} text
    * @return {String}
    * @example
-   *  １２３ａｂｃアイウ -> 123abcｱｲｳ
+   *  !?(){} -> ！？（）｛｝
    */
-  static toHankaku(text){
-    text = this.alphabetToHankaku(text)
-    text = this.numericToHankaku(text)
-    text = this.zenKataToHanKata(text)
-    return text
+  static symbolToZenkaku(text){
+    return text.replace(/['!"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~']/g, function(s) {
+      return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+    })
+  }
+
+  /**
+   * Convert symbol to hankaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  ！？（）｛｝ -> !?(){}
+   */
+  static symbolToHankaku(text){
+    return text.replace(/[！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～]/g, function(s) {
+      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    })
   }
 
   /**
@@ -439,10 +451,28 @@ export default class{
     text = this.alphabetToZenkaku(text)
     text = this.numericToZenkaku(text)
     text = this.hanKataToZenKata(text)
+    text = this.symbolToZenkaku(text)
+    return text
+  }
+
+  /**
+   * Convert to hankaku.
+   * @param {String} text
+   * @return {String}
+   * @example
+   *  １２３ａｂｃアイウ -> 123abcｱｲｳ
+   */
+  static toHankaku(text){
+    text = this.alphabetToHankaku(text)
+    text = this.numericToHankaku(text)
+    text = this.zenKataToHanKata(text)
+    text = this.symbolToHankaku(text)
     return text
   }
 
 }
+
+// private static methods
 
 function applyConvertMap(text, convertMap){
   for(const key in convertMap){

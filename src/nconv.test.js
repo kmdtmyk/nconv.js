@@ -469,10 +469,18 @@ test('numericToHankaku', () => {
   expect(Nconv.numericToHankaku('０１２３４５６７８９')).toBe('0123456789')
 })
 
+test('symbolToZenkaku', () => {
+  expect(Nconv.symbolToZenkaku('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')).toBe('！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～')
+})
+
+test('symbolToHankaku', () => {
+  expect(Nconv.symbolToHankaku('！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～')).toBe('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
+})
+
 test('toHankaku', () => {
-  expect(Nconv.toHankaku('１２３ａｂｃアイウ')).toBe('123abcｱｲｳ')
+  expect(Nconv.toHankaku('１２３ａｂｃアイウ！？')).toBe('123abcｱｲｳ!?')
 })
 
 test('toZenkaku', () => {
-  expect(Nconv.toZenkaku('123abcｱｲｳ')).toBe('１２３ａｂｃアイウ')
+  expect(Nconv.toZenkaku('123abcｱｲｳ!?')).toBe('１２３ａｂｃアイウ！？')
 })
