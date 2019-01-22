@@ -206,6 +206,11 @@ export default class{
    *  あいうえお -> アイウエオ
    */
   static hiraganaToZenKata(text){
+    const convertMap2 = {
+      'う゛': 'ヴ',
+    }
+    text = applyConvertMap(text, convertMap2)
+
     return text.replace(/[\u3041-\u3096]/g, match => {
       const char = match.charCodeAt(0) + 0x60
       return String.fromCharCode(char)

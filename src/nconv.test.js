@@ -341,6 +341,7 @@ test('hiraganaToZenKata', () => {
   expect(Nconv.hiraganaToZenKata('ゃゅょ')).toBe('ャュョ')
   expect(Nconv.hiraganaToZenKata('っ')).toBe('ッ')
   expect(Nconv.hiraganaToZenKata('ー')).toBe('ー')
+  expect(Nconv.hiraganaToZenKata('う゛')).toBe('ヴ')
 })
 
 test('zenKataToHiragana', () => {
