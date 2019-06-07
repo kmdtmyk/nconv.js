@@ -225,7 +225,7 @@ export default class{
    *  アイウエオ -> あいうえお
    */
   static zenKataToHiragana(text){
-    return text.replace(/[\u3041-\u30f6]/g, match => {
+    return text.replace(/[\u30a1-\u30f6]/g, match => {
       const char = match.charCodeAt(0) - 0x60
       return String.fromCharCode(char)
     })

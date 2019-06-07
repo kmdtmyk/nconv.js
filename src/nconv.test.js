@@ -1,5 +1,8 @@
 import Nconv from './nconv'
 
+const allHiragana = 'ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ'
+const allZenKata = 'ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ'
+
 describe('romajiToHiragana', () => {
   test('basic', () => {
     expect(Nconv.romajiToHiragana('aiueo')).toBe('あいうえお')
@@ -342,6 +345,8 @@ test('hiraganaToZenKata', () => {
   expect(Nconv.hiraganaToZenKata('っ')).toBe('ッ')
   expect(Nconv.hiraganaToZenKata('ー')).toBe('ー')
   expect(Nconv.hiraganaToZenKata('う゛')).toBe('ヴ')
+
+  expect(Nconv.hiraganaToZenKata(allZenKata)).toBe(allZenKata)
 })
 
 test('zenKataToHiragana', () => {
@@ -364,6 +369,8 @@ test('zenKataToHiragana', () => {
   expect(Nconv.zenKataToHiragana('ャュョ')).toBe('ゃゅょ')
   expect(Nconv.zenKataToHiragana('ッ')).toBe('っ')
   expect(Nconv.zenKataToHiragana('ー')).toBe('ー')
+
+  expect(Nconv.zenKataToHiragana(allHiragana)).toBe(allHiragana)
 })
 
 test('hiraganaToHanKata', () => {
