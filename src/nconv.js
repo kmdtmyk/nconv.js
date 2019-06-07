@@ -1,4 +1,4 @@
-export default class{
+export default class Nconv{
 
   /**
    * Convert romaji to hiragana.
@@ -453,10 +453,10 @@ export default class{
    *  123abcｱｲｳ!? -> １２３ａｂｃアイウ！？
    */
   static toZenkaku(text){
-    text = this.alphabetToZenkaku(text)
-    text = this.numericToZenkaku(text)
-    text = this.hanKataToZenKata(text)
-    text = this.symbolToZenkaku(text)
+    text = Nconv.alphabetToZenkaku(text)
+    text = Nconv.numericToZenkaku(text)
+    text = Nconv.hanKataToZenKata(text)
+    text = Nconv.symbolToZenkaku(text)
     return text
   }
 
@@ -468,10 +468,10 @@ export default class{
    *  １２３ａｂｃアイウ！？ -> 123abcｱｲｳ!?
    */
   static toHankaku(text){
-    text = this.alphabetToHankaku(text)
-    text = this.numericToHankaku(text)
-    text = this.zenKataToHanKata(text)
-    text = this.symbolToHankaku(text)
+    text = Nconv.alphabetToHankaku(text)
+    text = Nconv.numericToHankaku(text)
+    text = Nconv.zenKataToHanKata(text)
+    text = Nconv.symbolToHankaku(text)
     return text
   }
 
