@@ -5,6 +5,10 @@
 
 Japanese conversion library. This converts hiragana, katakana, romaji. Also, this converts half-width and full-width character.
 
+## Demo
+
+https://kmdtmyk.github.io/nconv.js/
+
 ## Install
 
 ```

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Demo</title>
+  <script src='https://cdn.jsdelivr.net/npm/@kmdtmyk/nconv@0.3.2/dist/nconv.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+  <style>
+  input{
+    width: 100%;
+    padding: 0.3em;
+    box-sizing: border-box;
+  }
+  table{
+    border-collapse: collapse;
+  }
+  tr:nth-child(even){
+    background-color: #eee;
+  }
+  tr:hover{
+    background-color: #ddd;
+  }
+  td{
+    border: 1px solid #bbb;
+    padding: 0.3em;
+  }
+  </style>
+</head>
+<body>
+  <div id='app'>
+    <input v-model='input' placeholder='input'>
+    <hr>
+    <table>
+      <tr v-for='method in methods'>
+        <td>{{method | methodName}}</td>
+        <td>{{method(input)}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      filters: {
+        methodName(method){
+          return method.toString().split('(')[0]
+        },
+      },
+      data(){
+        return {
+          input: 'aiueo あいうえお アイウエオ ｱｲｳｴｵ 12345 １２３４５ !#$%&',
+          methods: [
+            Nconv.romajiToHiragana,
+            Nconv.romajiToZenKata,
+            Nconv.romajiToHanKata,
+            Nconv.hiraganaToZenKata,
+            Nconv.hiraganaToHanKata,
+            Nconv.zenKataToHiragana,
+            Nconv.zenKataToHanKata,
+            Nconv.hanKataToHiragana,
+            Nconv.hanKataToZenKata,
+            Nconv.alphabetToZenkaku,
+            Nconv.alphabetToHankaku,
+            Nconv.numericToZenkaku,
+            Nconv.numericToHankaku,
+            Nconv.symbolToZenkaku,
+            Nconv.symbolToHankaku,
+            Nconv.toZenkaku,
+            Nconv.toHankaku,
+          ],
+        }
+      }
+    })
+  </script>
+</body>
+</html>
