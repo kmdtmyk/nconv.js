@@ -375,9 +375,7 @@ export default class Nconv{
    *  0123456789 -> ０１２３４５６７８９
    */
   static numericToZenkaku(text){
-    return text.replace(/[0-9]/g, function(s) {
-      return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
-    })
+    return text.replace(/[0-9]/g, charToZenkaku)
   }
 
   /**
@@ -388,9 +386,7 @@ export default class Nconv{
    *  ０１２３４５６７８９ -> 0123456789
    */
   static numericToHankaku(text){
-    return text.replace(/[０-９]/g, function(s) {
-      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-    })
+    return text.replace(/[０-９]/g, charToHankaku)
   }
 
   /**
@@ -401,9 +397,7 @@ export default class Nconv{
    *  abcde -> ａｂｃｄｅｆ
    */
   static alphabetToZenkaku(text){
-    return text.replace(/[a-zA-Z]/g, function(s) {
-      return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
-    })
+    return text.replace(/[a-zA-Z]/g, charToZenkaku)
   }
 
   /**
@@ -414,9 +408,7 @@ export default class Nconv{
    *  ａｂｃｄｅｆ -> abcde
    */
   static alphabetToHankaku(text){
-    return text.replace(/[ａ-ｚＡ-Ｚ]/g, function(s) {
-      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-    })
+    return text.replace(/[ａ-ｚＡ-Ｚ]/g, charToHankaku)
   }
 
   /**
@@ -427,9 +419,7 @@ export default class Nconv{
    *  !?(){} -> ！？（）｛｝
    */
   static symbolToZenkaku(text){
-    return text.replace(/['!"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~']/g, function(s) {
-      return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
-    })
+    return text.replace(/[!"#$%&'()*+,-./:;<=>?@\[\\\]^_`{|}~]/g, charToZenkaku)
   }
 
   /**
@@ -440,9 +430,7 @@ export default class Nconv{
    *  ！？（）｛｝ -> !?(){}
    */
   static symbolToHankaku(text){
-    return text.replace(/[！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～]/g, function(s) {
-      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-    })
+    return text.replace(/[！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～]/g, charToHankaku)
   }
 
   /**
@@ -490,4 +478,12 @@ function replaceConsecutiveConsonant(text, char){
   return text.replace(/([bcdfghjklmpqrstvwxyz])\1+/g, match => {
     return char.repeat(match.length - 1) + match[0]
   })
+}
+
+function charToHankaku(s){
+  return String.fromCharCode(s.charCodeAt(0) - 0xFEE0)
+}
+
+function charToZenkaku(s){
+  return String.fromCharCode(s.charCodeAt(0) + 0xFEE0)
 }
