@@ -489,8 +489,10 @@ test('symbolToHankaku', () => {
 
 test('toHankaku', () => {
   expect(Nconv.toHankaku('１２３ａｂｃアイウ！？')).toBe('123abcｱｲｳ!?')
+  expect(Nconv.toHankaku('　')).toBe(' ')
 })
 
 test('toZenkaku', () => {
   expect(Nconv.toZenkaku('123abcｱｲｳ!?')).toBe('１２３ａｂｃアイウ！？')
+  expect(Nconv.toZenkaku(' ')).toBe('　')
 })

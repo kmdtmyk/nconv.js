@@ -445,6 +445,7 @@ export default class Nconv{
     text = Nconv.numericToZenkaku(text)
     text = Nconv.hanKataToZenKata(text)
     text = Nconv.symbolToZenkaku(text)
+    text = text.replace(/ /g, '　')
     return text
   }
 
@@ -460,6 +461,7 @@ export default class Nconv{
     text = Nconv.numericToHankaku(text)
     text = Nconv.zenKataToHanKata(text)
     text = Nconv.symbolToHankaku(text)
+    text = text.replace(/　/g, ' ')
     return text
   }
 
