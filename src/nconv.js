@@ -401,7 +401,7 @@ export default class Nconv{
    *  abcde -> ａｂｃｄｅｆ
    */
   static alphabetToZenkaku(text){
-    return text.replace(/[a-z]/g, function(s) {
+    return text.replace(/[a-zA-Z]/g, function(s) {
       return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
     })
   }
@@ -414,7 +414,7 @@ export default class Nconv{
    *  ａｂｃｄｅｆ -> abcde
    */
   static alphabetToHankaku(text){
-    return text.replace(/[ａ-ｚ]/g, function(s) {
+    return text.replace(/[ａ-ｚＡ-Ｚ]/g, function(s) {
       return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     })
   }

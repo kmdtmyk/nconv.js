@@ -463,10 +463,12 @@ test('hanKataToZenKata', () => {
 
 test('alphabetToZenkaku', () => {
   expect(Nconv.alphabetToZenkaku('abcdefghijklmnopqrstuvwxyz')).toBe('ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ')
+  expect(Nconv.alphabetToZenkaku('ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ')
 })
 
 test('alphabetToHankaku', () => {
   expect(Nconv.alphabetToHankaku('ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ')).toBe('abcdefghijklmnopqrstuvwxyz')
+  expect(Nconv.alphabetToHankaku('ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
 })
 
 test('numericToZenkaku', () => {
