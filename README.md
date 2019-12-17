@@ -1,5 +1,5 @@
-
-[![Build Status](https://travis-ci.org/kmdtmyk/nconv.js.svg?branch=master)](https://travis-ci.org/kmdtmyk/nconv.js)
+[![Publish](https://github.com/kmdtmyk/nconv.js/workflows/Publish/badge.svg)](https://github.com/kmdtmyk/nconv.js/actions)
+[![Test](https://github.com/kmdtmyk/nconv.js/workflows/Test/badge.svg)](https://github.com/kmdtmyk/nconv.js/actions)
 
 # Nconv
 
