@@ -27,6 +27,7 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('kyakyikyukyekyo')).toBe('きゃきぃきゅきぇきょ')
     expect(Nconv.romajiToHiragana('gyagyigyugyegyo')).toBe('ぎゃぎぃぎゅぎぇぎょ')
     expect(Nconv.romajiToHiragana('syasyisyusyesyo')).toBe('しゃしぃしゅしぇしょ')
+    expect(Nconv.romajiToHiragana('shashishushesho')).toBe('しゃししゅしぇしょ')
     expect(Nconv.romajiToHiragana('zyazyizyuzyezyo')).toBe('じゃじぃじゅじぇじょ')
     expect(Nconv.romajiToHiragana('jyajyijyujyejyo')).toBe('じゃじぃじゅじぇじょ')
     expect(Nconv.romajiToHiragana('nyanyinyunyenyo')).toBe('にゃにぃにゅにぇにょ')
@@ -45,7 +46,6 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('qaqiquqeqo')).toBe('くぁくぃくくぇくぉ')
     expect(Nconv.romajiToHiragana('vavivuvevo')).toBe('ゔぁゔぃゔゔぇゔぉ')
 
-    expect(Nconv.romajiToHiragana('shi')).toBe('し')
     expect(Nconv.romajiToHiragana('chi')).toBe('ち')
     expect(Nconv.romajiToHiragana('tsu')).toBe('つ')
 
@@ -81,6 +81,7 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('kkyakkyikkyukkyekkyo')).toBe('っきゃっきぃっきゅっきぇっきょ')
     expect(Nconv.romajiToHiragana('ggyaggyiggyuggyeggyo')).toBe('っぎゃっぎぃっぎゅっぎぇっぎょ')
     expect(Nconv.romajiToHiragana('ssyassyissyussyessyo')).toBe('っしゃっしぃっしゅっしぇっしょ')
+    expect(Nconv.romajiToHiragana('sshasshisshusshessho')).toBe('っしゃっしっしゅっしぇっしょ')
     expect(Nconv.romajiToHiragana('zzyazzyizzyuzzyezzyo')).toBe('っじゃっじぃっじゅっじぇっじょ')
     expect(Nconv.romajiToHiragana('jjyajjyijjyujjyejjyo')).toBe('っじゃっじぃっじゅっじぇっじょ')
     expect(Nconv.romajiToHiragana('ttyattyittyuttyettyo')).toBe('っちゃっちぃっちゅっちぇっちょ')
@@ -98,7 +99,6 @@ describe('romajiToHiragana', () => {
     expect(Nconv.romajiToHiragana('qqaqqiqquqqeqqo')).toBe('っくぁっくぃっくっくぇっくぉ')
     expect(Nconv.romajiToHiragana('vvavvivvuvvevvo')).toBe('っゔぁっゔぃっゔっゔぇっゔぉ')
 
-    expect(Nconv.romajiToHiragana('sshi')).toBe('っし')
     expect(Nconv.romajiToHiragana('cchi')).toBe('っち')
     expect(Nconv.romajiToHiragana('ttsu')).toBe('っつ')
 
@@ -140,6 +140,7 @@ describe('romajiToZenKata', () => {
     expect(Nconv.romajiToZenKata('kyakyikyukyekyo')).toBe('キャキィキュキェキョ')
     expect(Nconv.romajiToZenKata('gyagyigyugyegyo')).toBe('ギャギィギュギェギョ')
     expect(Nconv.romajiToZenKata('syasyisyusyesyo')).toBe('シャシィシュシェショ')
+    expect(Nconv.romajiToZenKata('shashishushesho')).toBe('シャシシュシェショ')
     expect(Nconv.romajiToZenKata('zyazyizyuzyezyo')).toBe('ジャジィジュジェジョ')
     expect(Nconv.romajiToZenKata('jyajyijyujyejyo')).toBe('ジャジィジュジェジョ')
     expect(Nconv.romajiToZenKata('nyanyinyunyenyo')).toBe('ニャニィニュニェニョ')
@@ -158,7 +159,6 @@ describe('romajiToZenKata', () => {
     expect(Nconv.romajiToZenKata('qaqiquqeqo')).toBe('クァクィククェクォ')
     expect(Nconv.romajiToZenKata('vavivuvevo')).toBe('ヴァヴィヴヴェヴォ')
 
-    expect(Nconv.romajiToZenKata('shi')).toBe('シ')
     expect(Nconv.romajiToZenKata('chi')).toBe('チ')
     expect(Nconv.romajiToZenKata('tsu')).toBe('ツ')
 
@@ -194,6 +194,7 @@ describe('romajiToZenKata', () => {
     expect(Nconv.romajiToZenKata('kkyakkyikkyukkyekkyo')).toBe('ッキャッキィッキュッキェッキョ')
     expect(Nconv.romajiToZenKata('ggyaggyiggyuggyeggyo')).toBe('ッギャッギィッギュッギェッギョ')
     expect(Nconv.romajiToZenKata('ssyassyissyussyessyo')).toBe('ッシャッシィッシュッシェッショ')
+    expect(Nconv.romajiToZenKata('sshasshisshusshessho')).toBe('ッシャッシッシュッシェッショ')
     expect(Nconv.romajiToZenKata('zzyazzyizzyuzzyezzyo')).toBe('ッジャッジィッジュッジェッジョ')
     expect(Nconv.romajiToZenKata('jjyajjyijjyujjyejjyo')).toBe('ッジャッジィッジュッジェッジョ')
     expect(Nconv.romajiToZenKata('ttyattyittyuttyettyo')).toBe('ッチャッチィッチュッチェッチョ')
@@ -211,7 +212,6 @@ describe('romajiToZenKata', () => {
     expect(Nconv.romajiToZenKata('qqaqqiqquqqeqqo')).toBe('ックァックィックックェックォ')
     expect(Nconv.romajiToZenKata('vvavvivvuvvevvo')).toBe('ッヴァッヴィッヴッヴェッヴォ')
 
-    expect(Nconv.romajiToZenKata('sshi')).toBe('ッシ')
     expect(Nconv.romajiToZenKata('cchi')).toBe('ッチ')
     expect(Nconv.romajiToZenKata('ttsu')).toBe('ッツ')
 
@@ -253,6 +253,7 @@ describe('romajiToHanKata', () => {
     expect(Nconv.romajiToHanKata('kyakyikyukyekyo')).toBe('ｷｬｷｨｷｭｷｪｷｮ')
     expect(Nconv.romajiToHanKata('gyagyigyugyegyo')).toBe('ｷﾞｬｷﾞｨｷﾞｭｷﾞｪｷﾞｮ')
     expect(Nconv.romajiToHanKata('syasyisyusyesyo')).toBe('ｼｬｼｨｼｭｼｪｼｮ')
+    expect(Nconv.romajiToHanKata('shashishushesho')).toBe('ｼｬｼｼｭｼｪｼｮ')
     expect(Nconv.romajiToHanKata('zyazyizyuzyezyo')).toBe('ｼﾞｬｼﾞｨｼﾞｭｼﾞｪｼﾞｮ')
     expect(Nconv.romajiToHanKata('jyajyijyujyejyo')).toBe('ｼﾞｬｼﾞｨｼﾞｭｼﾞｪｼﾞｮ')
     expect(Nconv.romajiToHanKata('nyanyinyunyenyo')).toBe('ﾆｬﾆｨﾆｭﾆｪﾆｮ')
@@ -271,7 +272,6 @@ describe('romajiToHanKata', () => {
     expect(Nconv.romajiToHanKata('qaqiquqeqo')).toBe('ｸｧｸｨｸｸｪｸｫ')
     expect(Nconv.romajiToHanKata('vavivuvevo')).toBe('ｳﾞｧｳﾞｨｳﾞｳﾞｪｳﾞｫ')
 
-    expect(Nconv.romajiToHanKata('shi')).toBe('ｼ')
     expect(Nconv.romajiToHanKata('chi')).toBe('ﾁ')
     expect(Nconv.romajiToHanKata('tsu')).toBe('ﾂ')
 
@@ -307,6 +307,7 @@ describe('romajiToHanKata', () => {
     expect(Nconv.romajiToHanKata('kkyakkyikkyukkyekkyo')).toBe('ｯｷｬｯｷｨｯｷｭｯｷｪｯｷｮ')
     expect(Nconv.romajiToHanKata('ggyaggyiggyuggyeggyo')).toBe('ｯｷﾞｬｯｷﾞｨｯｷﾞｭｯｷﾞｪｯｷﾞｮ')
     expect(Nconv.romajiToHanKata('ssyassyissyussyessyo')).toBe('ｯｼｬｯｼｨｯｼｭｯｼｪｯｼｮ')
+    expect(Nconv.romajiToHanKata('sshasshisshusshessho')).toBe('ｯｼｬｯｼｯｼｭｯｼｪｯｼｮ')
     expect(Nconv.romajiToHanKata('zzyazzyizzyuzzyezzyo')).toBe('ｯｼﾞｬｯｼﾞｨｯｼﾞｭｯｼﾞｪｯｼﾞｮ')
     expect(Nconv.romajiToHanKata('jjyajjyijjyujjyejjyo')).toBe('ｯｼﾞｬｯｼﾞｨｯｼﾞｭｯｼﾞｪｯｼﾞｮ')
     expect(Nconv.romajiToHanKata('ttyattyittyuttyettyo')).toBe('ｯﾁｬｯﾁｨｯﾁｭｯﾁｪｯﾁｮ')
@@ -324,7 +325,6 @@ describe('romajiToHanKata', () => {
     expect(Nconv.romajiToHanKata('qqaqqiqquqqeqqo')).toBe('ｯｸｧｯｸｨｯｸｯｸｪｯｸｫ')
     expect(Nconv.romajiToHanKata('vvavvivvuvvevvo')).toBe('ｯｳﾞｧｯｳﾞｨｯｳﾞｯｳﾞｪｯｳﾞｫ')
 
-    expect(Nconv.romajiToHanKata('sshi')).toBe('ｯｼ')
     expect(Nconv.romajiToHanKata('cchi')).toBe('ｯﾁ')
     expect(Nconv.romajiToHanKata('ttsu')).toBe('ｯﾂ')
 
