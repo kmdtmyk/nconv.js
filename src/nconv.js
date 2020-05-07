@@ -38,6 +38,7 @@ export default class Nconv{
     const convertMap3 = {
       kya: 'きゃ', kyi: 'きぃ', kyu: 'きゅ', kye: 'きぇ', kyo: 'きょ',
       gya: 'ぎゃ', gyi: 'ぎぃ', gyu: 'ぎゅ', gye: 'ぎぇ', gyo: 'ぎょ',
+      kwa: 'くぁ', kwi: 'くぃ', kwu: 'くぅ', kwe: 'くぇ', kwo: 'くぉ',
       gwa: 'ぐぁ', gwi: 'ぐぃ', gwu: 'ぐぅ', gwe: 'ぐぇ', gwo: 'ぐぉ',
       sya: 'しゃ', syi: 'しぃ', syu: 'しゅ', sye: 'しぇ', syo: 'しょ',
       sha: 'しゃ', shi: 'し', shu: 'しゅ', she: 'しぇ', sho: 'しょ',
@@ -112,6 +113,7 @@ export default class Nconv{
     const convertMap3 = {
       kya: 'キャ', kyi: 'キィ', kyu: 'キュ', kye: 'キェ', kyo: 'キョ',
       gya: 'ギャ', gyi: 'ギィ', gyu: 'ギュ', gye: 'ギェ', gyo: 'ギョ',
+      kwa: 'クァ', kwi: 'クィ', kwu: 'クゥ', kwe: 'クェ', kwo: 'クォ',
       gwa: 'グァ', gwi: 'グィ', gwu: 'グゥ', gwe: 'グェ', gwo: 'グォ',
       sya: 'シャ', syi: 'シィ', syu: 'シュ', sye: 'シェ', syo: 'ショ',
       sha: 'シャ', shi: 'シ', shu: 'シュ', she: 'シェ', sho: 'ショ',
@@ -186,6 +188,7 @@ export default class Nconv{
     const convertMap3 = {
       kya: 'ｷｬ', kyi: 'ｷｨ', kyu: 'ｷｭ', kye: 'ｷｪ', kyo: 'ｷｮ',
       gya: 'ｷﾞｬ', gyi: 'ｷﾞｨ', gyu: 'ｷﾞｭ', gye: 'ｷﾞｪ', gyo: 'ｷﾞｮ',
+      kwa: 'ｸｧ', kwi: 'ｸｨ', kwu: 'ｸｩ', kwe: 'ｸｪ', kwo: 'ｸｫ',
       gwa: 'ｸﾞｧ', gwi: 'ｸﾞｨ', gwu: 'ｸﾞｩ', gwe: 'ｸﾞｪ', gwo: 'ｸﾞｫ',
       sya: 'ｼｬ', syi: 'ｼｨ', syu: 'ｼｭ', sye: 'ｼｪ', syo: 'ｼｮ',
       sha: 'ｼｬ', shi: 'ｼ', shu: 'ｼｭ', she: 'ｼｪ', sho: 'ｼｮ',
